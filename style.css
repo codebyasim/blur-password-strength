@@ -1,0 +1,40 @@
+/* Apply box-sizing to include padding and border in element's total width/height */
+* {
+    box-sizing: border-box;
+}
+
+/* Style the body to center content vertically and horizontally. It is for white box at center*/
+body {
+    /* Use Flexbox layout */
+    display: flex;
+    /* Stack children vertically */
+    flex-direction: column;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    justify-content: center;
+    /* Full viewport height */
+    height: 100vh;
+    /* Hide scrollbars */
+    overflow: hidden;
+    /* Remove default margin */
+    margin: 0;
+}
+
+/* Style for the blurred background image */
+.background {
+    /* Center and cover the background image */
+    background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center/cover;
+
+    /* Position relative to the viewport */
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    /* Stretch slightly beyond edges for blur effect */
+    right: -20px;
+    /* Place behind all other content */
+    z-index: -1;
+    /* Apply blur effect */
+    filter: blur(20px);
+}

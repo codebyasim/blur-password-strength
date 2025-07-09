@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Background</title>
+
+    <!-- Tailwind CSS CDN for utility-first styling, , copy the link from cdnjs.com -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Custom styling (blur background and layout tweaks) -->
+    <style>
+        /* Apply box-sizing globally */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Center the form and remove scrollbars */
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Blurred background image setup */
+        .background {
+            background: url('https://images.unsplash.com/photo-1556745757-8d76bdb6984b') no-repeat center center/cover;
+            position: absolute;
+            top: -20px;
+            bottom: -20px;
+            left: -20px;
+            right: -20px;
+            /* Behind everything */
+            z-index: -1;
+            /* Initial blur */
+            filter: blur(20px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background image (blurred and animated by JS) -->
+    <div class="background" id="background"></div>
+
+    <!-- Main white container with padding, rounded corners and shadow -->
+    <div class="bg-white rounded-xl shadow-lg p-8 w-96 max-w-full space-y-4">
+        <!-- Heading -->
+        <h1 class="text-2xl font-semibold text-center">Password Strength Visual</h1>
+        <p class="text-sm text-gray-600 text-center">Start typing your password below 👇</p>
+
+        <!-- Email Input Field -->
+        <div>
+            <label for="email" class="block text-gray-800 mb-1">Email</label>
+            <input id="email" type="email" placeholder="Enter your email"
+                class="w-full border p-2 rounded focus:outline-none focus:ring focus:border-blue-400" />
+        </div>
+
+        <!-- Password Input Field -->
+        <div>
+            <label for="password" class="block text-gray-800 mb-1">Password</label>
+
+            <!-- Wrapper for input + toggle button -->
+            <div class="relative">
+                <input id="password" type="password" placeholder="Enter password"
+                    class="w-full border p-2 rounded pr-10 focus:outline-none focus:ring focus:border-blue-400" />
+                <!-- Toggle visibility button -->
+                <button type="button" id="togglePassword" class="absolute right-2 top-2 text-sm text-blue-500">
+                    Show
+                </button>
+            </div>
+
+            <!-- Password strength feedback -->
+            <div id="strengthText" class="text-xs mt-1 text-gray-600"></div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="bg-blue-600 text-white py-2 px-4 w-full rounded hover:bg-blue-700 transition">
+            Submit
+        </button>
+    </div>
+
+    <!-- Link to external JS file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
