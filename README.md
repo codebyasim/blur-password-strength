@@ -35,4 +35,12 @@ This is a simple and interactive password strength visualizer built using **HTML
 - Implementing show/hide password toggle feature.
 - Applying real-time input validation techniques.
 
+## Screenshots
+
+![image alt]()
+![image alt]()
+![image alt]()
+
+
+
 
