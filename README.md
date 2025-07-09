@@ -37,9 +37,13 @@ This is a simple and interactive password strength visualizer built using **HTML
 
 ## Screenshots
 
-![image alt]()
-![image alt]()
-![image alt]()
+![image alt](
+https://github.com/codebyasim/blur-password-strength/blob/57a01d9df5d2b5050f043a10a9c715dc489665fd/img1.png
+)
+![image alt](https://github.com/codebyasim/blur-password-strength/blob/57a01d9df5d2b5050f043a10a9c715dc489665fd/img2.png)
+![image alt](
+https://github.com/codebyasim/blur-password-strength/blob/57a01d9df5d2b5050f043a10a9c715dc489665fd/img3.png
+)
 
 
 
